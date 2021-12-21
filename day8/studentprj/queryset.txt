@@ -1,0 +1,66 @@
+python manage.py shell
+
+from studentapp.models import Student
+
+Student.objects.all()
+
+Student.objects.get(id = 2)
+
+Student.objects.get(name__iexact = 'sazib')
+
+Student.objects.get(name__icontains = 'tan')
+
+Student.objects.filter(id__in = [1, 3, 7])
+
+///// greater than //////
+
+Student.objects.filter(id__gt = 3)
+
+///// greater than or equal //////
+
+Student.objects.filter(id__gte = 3)
+
+///// less than //////
+
+Student.objects.filter(id__lt = 3)
+
+///// less than or equal //////
+
+Student.objects.filter(id__lte = 3)
+
+
+
+
+//// sorting /////
+
+Student.objects.order_by('name')
+
+Student.objects.order_by('-id')
+
+//// sorting /////
+
+
+
+Student.objects.values()
+
+Student.objects.values('id', 'name')
+
+std1 = Student.objects.create(name = 'Sujon', email = 'sujon@love.com', dob = '2001-01-10', gender = 'Male')
+
+std1
+
+std2 = Student(name = 'Sujon', email = 'sujon@love.com', dob = '2001-01-10', gender = 'Male')
+
+std2
+
+'''
+raw sql
+
+'''
+
+for std in Student.objects.raw('select is, name, email from studentapp_student'):
+    print(std.id, std.name, std.email)
+
+Student.objects.filter(pk=8).update(name= 'Arina')
+
+Student.objects.filter(pk=8).delete()

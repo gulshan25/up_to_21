@@ -1,0 +1,4 @@
+mkvirtualenv django30 --python=/usr/bin/python3.8
+pip freeze
+unzip studentprj
+pip install django

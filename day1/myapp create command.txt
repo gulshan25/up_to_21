@@ -1,0 +1,64 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Microsoft Corporation. All rights reserved.
+
+F:\PythonWorks\django6\day1>pip install django
+Requirement already satisfied: django in c:\users\gulshan\appdata\local\programs\python\python39\lib\site-packages (3.2.6)
+Requirement already satisfied: asgiref<4,>=3.3.2 in c:\users\gulshan\appdata\local\programs\python\python39\lib\site-packages (from django) (3.4.1)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\gulshan\appdata\local\programs\python\python39\lib\site-packages (from django) (0.4.1)
+Requirement already satisfied: pytz in c:\users\gulshan\appdata\local\programs\python\python39\lib\site-packages (from django) (2021.1)
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the 'c:\users\gulshan\appdata\local\programs\python\python39\python.exe -m pip install --upgrade pip' command.
+
+F:\PythonWorks\django6\day1>django-admin startproject myproject
+
+F:\PythonWorks\django6\day1>cd myproject
+
+F:\PythonWorks\django6\day1\myproject>py manage.py startapp myapp
+
+F:\PythonWorks\django6\day1\myproject>py manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+F:\PythonWorks\django6\day1\myproject>py manage.py createsuperuser
+Username (leave blank to use 'gulshan'): admin
+Email address:
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+F:\PythonWorks\django6\day1\myproject>py manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 26, 2021 - 21:26:54
+Django version 3.2.6, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+F:\PythonWorks\django6\day1\myproject>code .
+
+F:\PythonWorks\django6\day1\myproject>
