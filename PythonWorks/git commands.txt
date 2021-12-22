@@ -1,0 +1,57 @@
+-----------Diffrent types of commit in gitHub with gitBush--------------------
+
+git config --global user.name gulshan25
+
+git config --global user.email g.r.tanny@gmail.com
+
+
+git init
+
+ls -lart
+
+git status
+
+git add -A
+
+git commit -m "write comment msg here"
+
+git branch -M main
+
+git remote add  origin https:\\.......(paste copied link from github repository)
+
+git push -u origin main
+
+///////////////////////////
+
+git init 
+
+git add .
+
+git commit -m "first commit"
+
+git branch -M main
+
+git remote add origin https:\\.....(paste copied link from github repository)
+
+git push -u origin main
+
+//////////////////////////
+
+--------replace files in same repository---------
+
+git add -A
+
+git commit -m "first commit"
+
+git push -u origin main
+
+///////////////////////////
+
+files and folders can also drag and drop in the repository and press commit button.
+
+click on the add file and upload the files and folders.
+
+///////////////////////////
+
+--------git clone----------
+git clone https:\\......(paste the copied others git clone link on a drive\floder and write this on git Bush)
