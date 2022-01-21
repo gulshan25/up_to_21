@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+
+
+<form method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+    
+        <!-- Button trigger modal -->
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="my_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete ?<strong>{{ object.name }}</strong>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="{% url 'list' %}" class="btn btn-primary">Back to list</a>
+          <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    </form>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
+></script>
+
+<script>
+    $(function(){
+        $("#my_modal").modal("show");
+    });
+</script>
+
+
+{% endblock content %}
+      
+
+
+    
